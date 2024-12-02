@@ -1,0 +1,31 @@
+1. Создание виртуальной среды: `python3 -m venv .venv`
+2. Активация виртуальной среды: `source .venv/bin/activate` по адресу: /Users/gilart/Desktop/Try/Python/django_website_stepik
+3. Диактивация виртуальной среды: `deactivate`
+4. Скачиваем Django: `pip install django`
+5. Создаем новый проект: `django-admin startproject stepiksite`
+6. Переходим в созданную папку и запускаем приложение: `django-admin startapp mainapp`
+7. -> settings.py - добавляем приложение в INSTALLED_APPS
+8. -> settings.py - сразу добавим новый путь к статическим файлам `STATIC_DIR = [BASE_DIR / "static"]`
+9. -> mainapp - создаем файл urls.py
+10 -> mainapp - создаем папку templates и закидываем туда наши шаблоны
+11. Запуск сервера: `python3 manage.py runserver`
+
+
+
+
+Процесс подключения postgreSQL к проекту 
+"
+(.venv) MacBook-Pro-MasVook-2:dict_of_words gilart$ psql -U postgres
+Password for user postgres: 
+psql (15.5)
+Type "help" for help.
+
+postgres=# CREATE DATABASE dict_of_words
+postgres-# CREATE USER dict_user WITH PASSWORD 'letsdict'
+postgres-# GRANT ALL PRIVILEGES ON DATABASE dict_of_words TO dict_user
+"
+
+Управление данными через админку Django: Создайте суперпользователя, чтобы управлять данными через панель администратора:
+`python3 manage.py createsuperuser`
+
+??? Запуск бд от лица пользователя: ` psql -h localhost -U dict_user -d dict_of_words`

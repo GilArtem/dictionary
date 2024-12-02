@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit word {% endblock %}
+
+{% block content %}
+
+<h1>Изменить слово</h1>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="old_word">Слово для редактирования:</label>
+        <input type="text" id="old_word" name="old_word" placeholder="Введите слово ..." required></input>
+        <br>
+        <label for='edited_word'>Изменить на:</label>
+        <input type="text" id="edited_word" name="edited_word" placeholder="Изменить на ..." required></input>
+        <br>
+        <input type="submit" value='Править'></input>
+    </form>
+
+    <br>
+
+    {% comment %} Отображение результата изменений {% endcomment %}
+    {% if result %}
+    <section>
+        <h2>Результат изменения:</h2>
+        <p>{{ result }}</p>
+    </section>
+    {% else %}
+    <section>
+        <h2>Результат изменения:</h2>
+        <p>Слово для изменения не указано!</p>
+    </section>
+    {% endif %}
+    
+{% endblock %}

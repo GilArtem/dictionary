@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Add word {% endblock %}
+
+{% block content %}
+
+<h1>Добавить слово</h1>
+
+    <form action="" method="POST">
+        {% csrf_token %} 
+        <label for="word1">Слово (Русский):</label>
+        <input type="text" id="word1" name="word1" required>
+
+        <br>
+        
+        <label for="word2">Перевод (Английский):</label>
+        <input type="text" id="word2" name="word2" required>
+        
+        <br>
+
+        <input type="submit" value="Добавить">
+    </form>
+
+{% endblock %}
+
+

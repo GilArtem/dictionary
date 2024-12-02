@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Подключение CSS для стилей -->
+</head>
+<body>
+    <nav>
+        <ui>
+            <li {% if page == 'home' %} active {% endif %}><a href="{% url 'home' %}">Домашняя страницв</a></li>
+            <li {% if page == 'word_list' %} active {% endif %}><a href="{% url 'word_list' %}">Словарь</a></li>
+            <li {% if page == 'add_word' %} active {% endif %}><a href="{% url 'add_word' %}">Добавить слово</a></li>
+            <li {% if page == 'edit_word' %} active {% endif %}><a href="{% url 'edit_word' %}">Изменить слово</a></li>
+            <li {% if page == 'delete_word' %} active {% endif %}><a href="{% url 'delete_word' %}">Удалить слово</a></li>
+        </ui>
+    </nav>
+    
+    {% block content %} 
+    
+    {% endblock %}
+
+</body>
+</html>
