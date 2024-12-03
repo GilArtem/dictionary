@@ -106,7 +106,7 @@ def edit_word_in_file(old_word: str, edit_word: str):
             return f'Слово {old_word_ed} не найдено!'
                                 
 
-# Топ 5 слов:
+# 5 последних искомых слов:
 def last_five_words_for_searching():
     words_arr = []
     with open(db_file, 'r', encoding='utf-8') as file:
@@ -116,6 +116,10 @@ def last_five_words_for_searching():
     
     return words_arr[:5]
         
+
+# Топ 5 слов по частоте запросов 
+def top_five_words():
+    pass
 
 
 
@@ -170,9 +174,13 @@ def edit_word_page(req):
         result = edit_word_in_file(old_word, edited_word)
     return render(req, 'edit_word.html', {'result': result})
 
-# Топ 5 последних искомых слов 
+# 5 последних искомых слов 
 def last_five_words_page(req):
     if req.method == 'GET':
         first_five_words = last_five_words_for_searching()
         return render(req, 'home.html', {'first_five_words': first_five_words})
         
+
+# Топ 5 искомых слов
+def top_five_words_page(req):
+    pass
