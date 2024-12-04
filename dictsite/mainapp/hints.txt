@@ -1,0 +1,16 @@
+Процесс подключения postgreSQL к проекту 
+"
+(.venv) MacBook-Pro-MasVook-2:dict_of_words gilart$ psql -U postgres
+Password for user postgres: 
+psql (15.5)
+Type "help" for help.
+
+postgres=# CREATE DATABASE dict_of_words
+postgres-# CREATE USER dict_user WITH PASSWORD 'letsdict'
+postgres-# GRANT ALL PRIVILEGES ON DATABASE dict_of_words TO dict_user
+"
+
+Управление данными через админку Django: Создайте суперпользователя, чтобы управлять данными через панель администратора:
+`python3 manage.py createsuperuser`
+
+??? Запуск бд от лица пользователя: ` psql -h localhost -U dict_user -d dict_of_words`

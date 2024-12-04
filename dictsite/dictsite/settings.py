@@ -13,9 +13,6 @@ import os
 from pathlib import Path
 import environ
 
-env = environ.Env()
-environ.Env.read_env()
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -87,6 +84,11 @@ WSGI_APPLICATION = 'dictsite.wsgi.application'
 # }
 
 # Меняем бд на postgresql
+
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '/Users/gilart/Desktop/Try/Python/dict_of_words/dictsite/.env'))
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
