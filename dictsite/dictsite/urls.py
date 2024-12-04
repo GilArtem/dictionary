@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Будем перебрасывать все запросы в файл urls.py в приложении mainapp
     path('', include('mainapp.urls')),
+    path('/polls', include('polls.urls')),
 ]
