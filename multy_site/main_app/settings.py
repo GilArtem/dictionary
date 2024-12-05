@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp',
+    'dict_site',
     'polls',
 ]
 
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'dictsite.urls'
+ROOT_URLCONF = 'main_app.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'dictsite.wsgi.application'
+WSGI_APPLICATION = 'main_app.wsgi.application'
 
 
 # Database
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'dictsite.wsgi.application'
 # Меняем бд на postgresql
 
 env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, '/Users/gilart/Desktop/Try/Python/dict_of_words/dictsite/.env'))
+environ.Env.read_env(os.path.join(BASE_DIR, '/Users/gilart/Desktop/Try/Python/dict_of_words/multy_site/.env'))
 
 
 DATABASES = {

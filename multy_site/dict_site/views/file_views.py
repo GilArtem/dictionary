@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
-db_file = '/Users/gilart/Desktop/Try/Python/dict_of_words/dictsite/mainapp/words_dict.txt' 
+db_file = '/Users/gilart/Desktop/Try/Python/dict_of_words/multy_site/dict_site/words_dict.txt' 
 
 # Функция для чтения данных из файла
 def read_from_file():
