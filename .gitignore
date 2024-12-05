@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 
 hints.txt
+
+.DS_Store
