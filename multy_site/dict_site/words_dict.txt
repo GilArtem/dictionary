@@ -1,7 +1,0 @@
-Мяч - Ball
-Книга - Book
-Змея - Snake 
-Любовь - Love 
-Деньги - Money 
-Чай - Tea 
-Телефон - Phone
